@@ -1,4 +1,6 @@
 @extends('layouts.app')
 @section('konten')
-<!-- Info boxes -->
+    @foreach ($produk as $item)
+        {{ $item->code }}
+    @endforeach
 @endsection

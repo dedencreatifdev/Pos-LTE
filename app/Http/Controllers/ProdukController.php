@@ -13,7 +13,8 @@ class ProdukController extends Controller
     public function index()
     {
         return view('admin.produk.produk-index', [
-            'title' => 'Produk List'
+            'title' => 'Produk List',
+            'produk' => Produk::all()
         ]);
     }
 
