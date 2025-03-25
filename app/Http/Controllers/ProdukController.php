@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ProdukDataTable;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 
@@ -10,12 +11,17 @@ class ProdukController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    // public function index()
+    // {
+    //     return view('admin.produk.produk-index', [
+    //         'title' => 'Produk List',
+    //         'produk' => Produk::all()
+    //     ]);
+    // }
+
+    public function index(ProdukDataTable $dataTable)
     {
-        return view('admin.produk.produk-index', [
-            'title' => 'Produk List',
-            'produk' => Produk::all()
-        ]);
+        return $dataTable->render('admin.produk.produk-index');
     }
 
     /**

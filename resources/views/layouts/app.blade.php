@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('style') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('style') }}/dist/css/adminlte.min.css">
+
+    @stack('css')
 </head>
 
 <body class="text-sm hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -100,10 +102,10 @@
     <!-- ChartJS -->
     <script src="{{ asset('style') }}/plugins/chart.js/Chart.min.js"></script>
 
-    <!-- AdminLTE for demo purposes -->
-    <!-- <script src="{{ asset('style') }}/dist/js/demo.js"></script> -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('style') }}/dist/js/pages/dashboard2.js"></script>
+
+    @stack('js')
 </body>
 
 </html>
