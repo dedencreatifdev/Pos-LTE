@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\Produk;
 
+use App\Models\Product;
 use App\Models\Produk;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -15,7 +16,7 @@ class ProdukIndex extends Component
     public function render()
     {
         return view('livewire.admin.produk.produk-index',[
-            'produk_list'=>Produk::paginate(20)
+            'produk_list'=>Product::paginate(20)
         ]);
     }
 }

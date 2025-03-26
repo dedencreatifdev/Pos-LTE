@@ -102,13 +102,14 @@
                                 <th></th>
                             </tr>
                         </thead>
+
                         <tbody>
                             @foreach ($produk_list as $item)
                                 <tr>
                                     <td>1</td>
                                     <td>{{ $item->code }}</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->unit }}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

@@ -9,5 +9,5 @@ use Illuminate\Notifications\Notifiable;
 class Produk extends Model
 {
     use HasFactory, Notifiable;
-    protected $table = 'sma_products';
+    // protected $table = 'sma_products';
 }
