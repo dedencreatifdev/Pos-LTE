@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
-                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-table"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">CPU Traffic</span>
+                    <span class="info-box-text">Total Produk</span>
                     <span class="info-box-number">
-                        10
-                        <small>%</small>
+                        {{ $produk_total }}
+                        <small>Item</small>
                     </span>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <div class="float-right">
 
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control" placeholder="Search Mail">
+                                <input type="text" class="form-control" placeholder="Cari Produk...">
                                 <div class="input-group-append">
                                     <div class="btn btn-primary">
                                         <i class="fas fa-search"></i>
@@ -86,42 +86,72 @@
                             </div>
                         </div>
                     </div>
+<div class="table table-responsive">
+    <table class="table table-sm table-striped table-hover">
+        <thead class="bg-primary">
+            <tr>
+                <th>#</th>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+                <th>Satuan</th>
+                <th>Kategori</th>
+                <th>Merk</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Hpp</th>
+                <th>Alert</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
 
-                    <table class="table table-sm table-striped table-hover">
-                        <thead class="bg-primary">
-                            <tr>
-                                <th>#</th>
-                                <th>Kode Barang</th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
+        <tbody>
+            @foreach ($produk_list as $item)
+                <tr>
+                    <td>1</td>
+                    <td>{{ $item->code }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->unit }}</td>
+                    <td>{{ $item->category_id }}</td>
+                    <td>{{ $item->brand }}</td>
+                    <td class="text-right">{{ $item->price }}</td>
+                    <td>{{ $item->unit }}</td>
+                    <td class="text-right">{{ $item->price }}</td>
+                    <td>{{ $item->alert_quantity }}</td>
+                    <td class="w-10" style="width: 20px">
+                        <div class="dropdown">
+                            <a class="" data-toggle="dropdown" href="#"
+                                aria-expanded="false">
+                                <i class="far fa-file"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="mr-2 fas fa-envelope"></i> 4 new messages
+                                    <span class="float-right text-sm text-muted">3 mins</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="mr-2 fas fa-users"></i> 8 friend requests
+                                    <span class="float-right text-sm text-muted">12 hours</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="mr-2 fas fa-file"></i> 3 new reports
+                                    <span class="float-right text-sm text-muted">2 days</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item dropdown-footer">See All
+                                    Notifications</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
-                        <tbody>
-                            @foreach ($produk_list as $item)
-                                <tr>
-                                    <td>1</td>
-                                    <td>{{ $item->code }}</td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->unit }}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+</div>
                 </div>
             </div>
         </div>

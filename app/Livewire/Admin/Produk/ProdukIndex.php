@@ -16,7 +16,8 @@ class ProdukIndex extends Component
     public function render()
     {
         return view('livewire.admin.produk.produk-index',[
-            'produk_list'=>Product::paginate(20)
+            'produk_list'=>Product::paginate(15),
+            'produk_total'=>Product::count()
         ]);
     }
 }
