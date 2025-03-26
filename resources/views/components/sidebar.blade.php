@@ -75,8 +75,8 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('admin.dashboard.index') }}"
-                                    class="nav-link {{ request()->routeis('admin.dashboard.index') ? 'active' : '' }}">
+                                <a href="{{ route('admin.produk.index') }}"
+                                    class="nav-link {{ request()->routeis('admin.produk.index') ? 'active' : '' }}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Produk List</p>
                                 </a>
