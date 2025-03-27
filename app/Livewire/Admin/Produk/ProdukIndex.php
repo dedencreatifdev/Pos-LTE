@@ -12,12 +12,13 @@ use Livewire\WithPagination;
 class ProdukIndex extends Component
 {
     use WithPagination;
-
+    public $data;
     public function render()
     {
-        return view('livewire.admin.produk.produk-index',[
-            'produk_list'=>Product::paginate(15),
-            'produk_total'=>Product::count()
+        return view('livewire.admin.produk.produk-index', [
+            'produk_list' => Product::paginate(15),
+            'produk_total' => Product::count(),
+            'datas'=> $this->data,
         ]);
     }
 }
