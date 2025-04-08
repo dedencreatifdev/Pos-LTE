@@ -50,7 +50,7 @@
 
     $('#example3').DataTable({
       "paging": true,
-      "lengthChange": true,
+      "lengthChange": false,
       "searching": true,
       "ordering": true,
       "info": true,
@@ -58,7 +58,7 @@
       "responsive": true,
       "columnDefs": [
         { "orderable": false, "targets": [-2, -1] }, // Disable ordering on the first and last columns.
-        { "className": "text-right", "targets": [3, 4] } // Center align columns 1 and 2
+        { "className": "text-right", "targets": [1, 2] } // Center align columns 1 and 2
       ],
       "language": {
         "search": "Cari produk:",
@@ -74,31 +74,31 @@
       }
     });
 
-    $('#yajraTable').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('produk.index') }}",
-        columns: [
-            { data: 'id', name: 'id' },
-            { data: 'nama_produk', name: 'nama_produk' },
-            { data: 'kategori', name: 'kategori' },
-            { data: 'harga', name: 'harga', className: 'text-right' },
-            { data: 'stok', name: 'stok', className: 'text-right' },
-            { data: 'aksi', name: 'aksi', orderable: false, searchable: false }
-        ],
-        language: {
-            search: "Cari:",
-            lengthMenu: "Tampilkan _MENU_ entri",
-            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
-            infoEmpty: "Tidak ada data tersedia",
-            paginate: {
-                first: "Pertama",
-                last: "Terakhir",
-                next: "Berikutnya",
-                previous: "Sebelumnya"
-            }
-        }
-    });
+    // $('#yajraTable').DataTable({
+    //     processing: true,
+    //     serverSide: true,
+    //     ajax: "{{ route('produk.index') }}",
+    //     columns: [
+    //         { data: 'id', name: 'id' },
+    //         { data: 'nama_produk', name: 'nama_produk' },
+    //         { data: 'kategori', name: 'kategori' },
+    //         { data: 'harga', name: 'harga', className: 'text-right' },
+    //         { data: 'stok', name: 'stok', className: 'text-right' },
+    //         { data: 'aksi', name: 'aksi', orderable: false, searchable: false }
+    //     ],
+    //     language: {
+    //         search: "Cari:",
+    //         lengthMenu: "Tampilkan _MENU_ entri",
+    //         info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+    //         infoEmpty: "Tidak ada data tersedia",
+    //         paginate: {
+    //             first: "Pertama",
+    //             last: "Terakhir",
+    //             next: "Berikutnya",
+    //             previous: "Sebelumnya"
+    //         }
+    //     }
+    // });
 
   });
 </script>

@@ -29,7 +29,7 @@
                 <!-- /.card-header -->
                 <div class="card-body p-1">
 
-                    <table id="example3" class="table table-bordered table-striped table-sm">
+                    <table id="example2" class="table table-bordered table-striped table-sm">
                         <thead>
                             <tr>
                                 <th>Rendering engine</th>
@@ -43,10 +43,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @for ($i = 1; $i < 1000; $i++)
+                            @for ($i = 1; $i < 100; $i++)
 
                             <tr>
-                                <td>Trident</td>
+                                <td>{{ $i }}</td>
                                 <td>Internet
                                     Explorer 4.0
                                 </td>
@@ -61,7 +61,7 @@
                                 </td>
                                 <td>Win 95+</td>
                                 <td> 4</td>
-                                <td>X</td>
+                                <td> 4</td>
                             </tr>
                             @endfor
 
@@ -72,6 +72,9 @@
                                 <th>Browser</th>
                                 <th>Platform(s)</th>
                                 <th>Engine version</th>
+                                <th>CSS grade</th>
+                                <th>CSS grade</th>
+                                <th>CSS grade</th>
                                 <th>CSS grade</th>
                             </tr>
                         </tfoot>

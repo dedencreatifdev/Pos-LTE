@@ -28,16 +28,7 @@
 
     @stack('css')
 
-    <!-- PAGE PLUGINS -->
-    <!-- jQuery Mapael -->
-    <script src="{{ asset('style/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-    <script src="{{ asset('style/plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset('style/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-    <script src="{{ asset('style/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
-    <!-- ChartJS -->
-    <script src="{{ asset('style/plugins/chart.js/Chart.min.js') }}"></script>
 
-    @stack('js')
 </head>
 
 <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
@@ -100,7 +91,16 @@
     </div>
     <!-- ./wrapper -->
 
+<!-- PAGE PLUGINS -->
+    <!-- jQuery Mapael -->
+    <script src="{{ asset('style/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
+    <script src="{{ asset('style/plugins/raphael/raphael.min.js') }}"></script>
+    <script src="{{ asset('style/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
+    <script src="{{ asset('style/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+    <!-- ChartJS -->
+    <script src="{{ asset('style/plugins/chart.js/Chart.min.js') }}"></script>
 
+    @stack('js')
 </body>
 
 </html>
