@@ -37,8 +37,6 @@
     <!-- ChartJS -->
     <script src="{{ asset('style/plugins/chart.js/Chart.min.js') }}"></script>
 
-    
-
     @stack('js')
 </head>
 
