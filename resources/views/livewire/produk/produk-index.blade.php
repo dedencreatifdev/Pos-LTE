@@ -54,7 +54,7 @@
       "searching": true,
       "ordering": true,
       "info": true,
-      "autoWidth": false,
+      "autoWidth": true,
       "responsive": false,
       "columnDefs": [
         { "orderable": false, "targets": [-2, -1] }, // Disable ordering on the first and last columns.
