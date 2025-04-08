@@ -55,7 +55,7 @@
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
+      "responsive": false,
       "columnDefs": [
         { "orderable": false, "targets": [-2, -1] }, // Disable ordering on the first and last columns.
         { "className": "text-right", "targets": [3, 4] } // Center align columns 1 and 2
