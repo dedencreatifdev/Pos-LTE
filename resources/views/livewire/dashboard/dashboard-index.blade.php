@@ -923,3 +923,12 @@
     </div>
     <!-- /.row -->
 </div>
+
+{{-- TAMBAHAN --}}
+@push('css')
+
+@endpush
+@push('js')
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('style/dist/js/pages/dashboard2.js') }}"></script>
+@endpush
