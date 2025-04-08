@@ -74,6 +74,32 @@
       }
     });
 
+    $('#yajraTable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('produk.index') }}",
+        columns: [
+            { data: 'id', name: 'id' },
+            { data: 'nama_produk', name: 'nama_produk' },
+            { data: 'kategori', name: 'kategori' },
+            { data: 'harga', name: 'harga', className: 'text-right' },
+            { data: 'stok', name: 'stok', className: 'text-right' },
+            { data: 'aksi', name: 'aksi', orderable: false, searchable: false }
+        ],
+        language: {
+            search: "Cari:",
+            lengthMenu: "Tampilkan _MENU_ entri",
+            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+            infoEmpty: "Tidak ada data tersedia",
+            paginate: {
+                first: "Pertama",
+                last: "Terakhir",
+                next: "Berikutnya",
+                previous: "Sebelumnya"
+            }
+        }
+    });
+
   });
 </script>
 @endpush
