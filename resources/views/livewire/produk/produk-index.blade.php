@@ -50,12 +50,12 @@
 
     $('#example3').DataTable({
       "paging": true,
-      "lengthChange": false,
+      "lengthChange": true,
       "searching": true,
       "ordering": true,
       "info": true,
       "autoWidth": true,
-      "responsive": false,
+      "responsive": true,
       "columnDefs": [
         { "orderable": false, "targets": [-2, -1] }, // Disable ordering on the first and last columns.
         { "className": "text-right", "targets": [3, 4] } // Center align columns 1 and 2
