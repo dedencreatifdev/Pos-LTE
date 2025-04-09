@@ -20,7 +20,7 @@
 <body class="hold-transition login-page text-sm">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ route('dashboard.indexAdmin') }}"><b>Admin</b>LTE</a>
+            <a href="{{ route('dashboard.indexAdmin') }}"><b>Apps</b>MART</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -33,12 +33,11 @@
                         <label for="exampleInputEmail1">Email address</label>
                         <input name="email" type="email" name="email" class="form-control form-control-sm @error('email') is-invalid
                         @enderror" id="exampleInputEmail1" placeholder="Email"
-                            aria-describedby="exampleInputEmail1-error" aria-invalid="true"  value="{{ old('email') }}">
+                            aria-describedby="exampleInputEmail1-error" aria-invalid="true" value="{{ old('email') }}">
 
                         @error('email')
                         <span id="exampleInputEmail1-error" class="error invalid-feedback">
                             {{ $message }}
-                            Please enter a email address
                         </span>
                         @enderror
                     </div>
@@ -46,11 +45,14 @@
                     <div class="form-group">
                         <label for="exampleInputpassword1">Password</label>
                         <input name="password" type="password" name="password"
-                            class="form-control form-control-sm @error('password') is-invalid  @enderror" id="exampleInputpassword1"
-                            placeholder="Password" aria-describedby="exampleInputpassword1-error"
-                            aria-invalid="true">
-                        <span id="exampleInputpassword1-error" class="error invalid-feedback">Please enter a password
+                            class="form-control form-control-sm @error('password') is-invalid  @enderror"
+                            id="exampleInputpassword1" placeholder="Password"
+                            aria-describedby="exampleInputpassword1-error" aria-invalid="true">
+                        @error('password')
+                        <span id="exampleInputEmail1-error" class="error invalid-feedback">
+                            {{ $message }}
                         </span>
+                        @enderror
                     </div>
 
                     <div class="row">
@@ -64,7 +66,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-sm">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-sm">Login</button>
                         </div>
                         <!-- /.col -->
                     </div>

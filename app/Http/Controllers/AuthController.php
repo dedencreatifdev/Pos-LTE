@@ -22,6 +22,10 @@ class AuthController extends Controller
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
+        ],[
+            'email.required' => 'Email wajib disini',
+            'email.email' => 'Email must be a valid email address',
+            'password.required' => 'Password wajib disini',
         ]);
 
         if (Auth::attempt($credentials)) {
@@ -31,7 +35,7 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'Email atau password belum terdaftar, silahkan kontak Administrator.',
         ])->onlyInput('email');
     }
 
