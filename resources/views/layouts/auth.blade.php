@@ -33,9 +33,11 @@
                         <label for="exampleInputEmail1">Email address</label>
                         <input name="email" type="email" name="email" class="form-control form-control-sm @error('email') is-invalid
                         @enderror" id="exampleInputEmail1" placeholder="Email"
-                            aria-describedby="exampleInputEmail1-error" aria-invalid="true">
+                            aria-describedby="exampleInputEmail1-error" aria-invalid="true"  value="{{ old('email') }}">
+
                         @error('email')
                         <span id="exampleInputEmail1-error" class="error invalid-feedback">
+                            {{ $message }}
                             Please enter a email address
                         </span>
                         @enderror
