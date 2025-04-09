@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('kode_pos', 15)->nullable();
             $table->string('no_telp', 20)->nullable();
 
+            $table->dateTime('login_terahir')->nullable();
+            $table->string('login_ip', 20)->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });

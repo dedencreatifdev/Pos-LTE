@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,7 @@ class AuthController extends Controller
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
-        ],[
+        ], [
             'email.required' => 'Email wajib disini',
             'email.email' => 'Email must be a valid email address',
             'password.required' => 'Password wajib disini',
@@ -30,9 +31,15 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            User::where('email', $request->email)->update([
+                'login_terahir' => now(),
+                'login_ip' => $request->ip(),
+            ]);
 
             return redirect()->intended('dashboard');
         }
+
+
 
         return back()->withErrors([
             'email' => 'Email atau password belum terdaftar, silahkan kontak Administrator.',
@@ -68,5 +75,12 @@ class AuthController extends Controller
     {
         // Handle the email verification logic here
         // return redirect()->route('login')->with('message', 'Verification email sent');
+    }
+
+    //
+
+    public function username()
+    {
+        return 'name';
     }
 }

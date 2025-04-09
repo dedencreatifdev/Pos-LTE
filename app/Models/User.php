@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'alamat',
+        'kota',
+        'kode_pos',
+        'no_telp',
+        'login_terahir',
+        'login_ip',
     ];
 
     /**
@@ -45,4 +51,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * The attributes that should be appended to the model's array form.
+     *
+     * @return list<string>
+     */
+    
 }
