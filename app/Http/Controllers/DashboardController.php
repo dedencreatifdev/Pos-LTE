@@ -9,9 +9,16 @@ class DashboardController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function indexAdmin()
     {
-        return view('dashboard.dashboard-index')->with('title', 'Dashboard');
+        return view('admin.dashboard.dashboard-index')->with('title', 'Dashboard');
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function indexToko()
+    {
+        return view('store.dashboard.dashboard-index')->with('title', 'Dashboard');
     }
 
     /**

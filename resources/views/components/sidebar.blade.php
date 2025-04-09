@@ -1,10 +1,10 @@
 <div>
     <aside class="main-sidebar sidebar-light-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{ route('dashboard.index') }}" class="brand-link bg-primary">
+        <a href="{{ route('dashboard.indexAdmin') }}" class="brand-link bg-primary">
             <img src="{{asset('style/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                 class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">{{config('app.name')}}</span>
         </a>
 
         <!-- Sidebar -->
@@ -16,7 +16,7 @@
                         alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -34,8 +34,8 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('dashboard.index') }}"
-                                    class="nav-link {{ request()->routeis('dashboard.index') ? 'active' : '' }}">
+                                <a href="{{ route('dashboard.indexAdmin') }}"
+                                    class="nav-link {{ request()->routeis('dashboard.indexAdmin') ? 'active' : '' }}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sales</p>
                                 </a>
@@ -43,18 +43,18 @@
                             <li class="nav-item">
                                 <a href="./index2.html" class="nav-link ">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v2</p>
+                                    <p>CRM</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="./index3.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v3</p>
+                                    <p>Analitic</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
+                    <li class="nav-header">MASTER DATA</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
@@ -71,9 +71,29 @@
                                     <p>Produk List</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Kategori</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Satuan</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Merk</p>
+                                </a>
+                            </li>
 
                         </ul>
                     </li>
+
+                    <li class="nav-header">TRANSAKSI</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
@@ -93,6 +113,7 @@
 
                         </ul>
                     </li>
+                    <li class="nav-header">OWHER</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
